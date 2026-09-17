@@ -8,8 +8,7 @@ import { WHATSAPP_LINK } from "@/lib/contact"
 
 const navLinks = [
   { href: "#servicos", label: "Serviços" },
-  { href: "#especialidade", label: "Especialidade" },
-  { href: "#espaco", label: "Espaço" },
+  { href: "#especialidade", label: "Dra. Roseli" },
   { href: "#depoimentos", label: "Depoimentos" },
   { href: "#contato", label: "Contato" },
 ]
@@ -18,10 +17,10 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
-      <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-4 px-4 py-2 md:px-6 lg:gap-10">
+    <header className="sticky top-0 z-50 bg-background/90 backdrop-blur">
+      <div className="mx-auto flex min-h-24 max-w-7xl items-center justify-between gap-4 px-4 py-2 md:px-6 lg:gap-10">
         <a href="#inicio" className="flex shrink-0 items-center">
-          <Logo />
+          <Logo imgClassName="h-16 sm:h-20" />
         </a>
 
         <nav

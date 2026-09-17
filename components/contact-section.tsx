@@ -12,7 +12,7 @@ export function ContactSection() {
   return (
     <section id="contato" className="bg-secondary/40 py-20 md:py-28">
       <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
-        <h2 className="text-balance font-display text-3xl font-semibold text-foreground sm:text-4xl">
+        <h2 className="text-balance font-display text-3xl font-semibold text-primary sm:text-4xl">
           Agende sua consulta, sem complicações
         </h2>
         <p className="mt-4 text-pretty text-muted-foreground">
@@ -26,28 +26,28 @@ export function ContactSection() {
             <div className="flex items-start gap-3">
               <Phone className="mt-0.5 h-5 w-5 shrink-0 text-copper" />
               <div>
-                <p className="text-sm font-semibold text-foreground">Telefone</p>
+                <p className="text-sm font-semibold text-primary">Telefone</p>
                 <p className="text-sm text-muted-foreground">+55 (00) 00000-0000</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <Mail className="mt-0.5 h-5 w-5 shrink-0 text-copper" />
               <div>
-                <p className="text-sm font-semibold text-foreground">E-mail</p>
+                <p className="text-sm font-semibold text-primary">E-mail</p>
                 <p className="text-sm text-muted-foreground">contato@drroselperfoll.com</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-copper" />
               <div>
-                <p className="text-sm font-semibold text-foreground">Localização</p>
+                <p className="text-sm font-semibold text-primary">Localização</p>
                 <p className="text-sm text-muted-foreground">Endereço do consultório</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <Clock className="mt-0.5 h-5 w-5 shrink-0 text-copper" />
               <div className="space-y-1">
-                <p className="text-sm font-semibold text-foreground">Horários de atendimento</p>
+                <p className="text-sm font-semibold text-primary">Horários de atendimento</p>
                 {hours.map(([day, time]) => (
                   <p key={day + time} className="text-sm text-muted-foreground">
                     {day}: {time}

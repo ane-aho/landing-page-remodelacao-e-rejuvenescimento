@@ -20,13 +20,14 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section id="depoimentos" className="border-b border-border py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
+    <section id="depoimentos" className="relative overflow-hidden bg-gradient-to-b from-background to-secondary/40 py-20 md:py-28">
+      <div className="pointer-events-none absolute -right-20 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-copper/10 blur-3xl" />
+      <div className="relative mx-auto max-w-7xl px-4 md:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
             Notas de agradecimento
           </p>
-          <h2 className="mt-3 text-balance font-display text-3xl font-semibold text-foreground sm:text-4xl">
+          <h2 className="mt-3 text-balance font-display text-3xl font-semibold text-primary sm:text-4xl">
             O que dizem nossas pacientes
           </h2>
           <p className="mt-4 text-pretty text-muted-foreground">
@@ -44,11 +45,11 @@ export function TestimonialsSection() {
               </div>
               <p className="text-sm leading-relaxed text-muted-foreground">&ldquo;{quote}&rdquo;</p>
               <div className="mt-auto flex items-center gap-2">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-xs font-semibold text-copper">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-rose/25 text-xs font-semibold text-copper">
                   {name.charAt(0)}
                 </span>
                 <div className="leading-tight">
-                  <p className="text-sm font-medium text-foreground">{name}</p>
+                  <p className="text-sm font-medium text-primary">{name}</p>
                   <p className="text-xs text-muted-foreground">Paciente</p>
                 </div>
               </div>

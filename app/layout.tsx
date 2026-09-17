@@ -1,11 +1,18 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
 
 const sans = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
+  display: 'swap',
+})
+
+const display = Cormorant_Garamond({
+  subsets: ['latin'],
+  variable: '--font-display-serif',
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 })
 
@@ -38,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className={`light ${sans.variable}`}>
+    <html lang="pt-BR" className={`light ${sans.variable} ${display.variable}`}>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

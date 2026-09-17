@@ -6,10 +6,11 @@
 
 @theme inline {
   --font-sans: var(--font-sans);
-  --font-serif: 'Aptos Display', 'Aptos', var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Aptos Display', 'Aptos', var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-display-serif), Georgia, 'Times New Roman', serif;
+  --font-display: var(--font-display-serif), Georgia, 'Times New Roman', serif;
   --color-copper: var(--copper);
   --color-copper-foreground: var(--copper-foreground);
+  --color-rose: var(--rose);
   --color-sage: var(--sage);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -53,23 +54,24 @@
 
 :root {
   color-scheme: light;
-  /* Dra. Roseli Perfoll — ink #15181D, slate #3B3F47, blush #F1E6E8, rose #D89AA7, deep rose #B85C6A */
+  /* Dra. Roseli Perfoll — graphite #282C32 (soft blend of ink #15181D + slate #3B3F47), blush #F1E6E8, rose #D89AA7, deep rose #B85C6A */
   --background: #f1e6e8;
-  --foreground: #15181d;
+  --foreground: #282c32;
   --card: #ffffff;
-  --card-foreground: #15181d;
+  --card-foreground: #282c32;
   --popover: #ffffff;
-  --popover-foreground: #15181d;
-  --primary: #15181d;
+  --popover-foreground: #282c32;
+  --primary: #282c32;
   --primary-foreground: #f1e6e8;
   --secondary: #f1e6e8;
-  --secondary-foreground: #15181d;
+  --secondary-foreground: #282c32;
   --muted: #e7d9dc;
   --muted-foreground: #3b3f47;
   --accent: #f6ecee;
-  --accent-foreground: #15181d;
+  --accent-foreground: #282c32;
   --copper: #b85c6a;
   --copper-foreground: #ffffff;
+  --rose: #d89aa7;
   --sage: #3b3f47;
   --destructive: oklch(0.577 0.245 27.325);
   --border: #e0d1d4;
