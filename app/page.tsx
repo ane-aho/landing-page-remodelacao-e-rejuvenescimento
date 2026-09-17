@@ -1,9 +1,9 @@
 import { SiteHeader } from "@/components/site-header"
 import { HeroSection } from "@/components/hero-section"
-import { PillarsSection } from "@/components/pillars-section"
-import { MethodSection } from "@/components/method-section"
-import { MenopauseSection } from "@/components/menopause-section"
-import { FaqSection } from "@/components/faq-section"
+import { ServicesSection } from "@/components/services-section"
+import { SpecialtySection } from "@/components/specialty-section"
+import { GallerySection } from "@/components/gallery-section"
+import { TestimonialsSection } from "@/components/testimonials-section"
 import { ContactSection } from "@/components/contact-section"
 import { SiteFooter } from "@/components/site-footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
@@ -14,10 +14,10 @@ export default function Page() {
       <SiteHeader />
       <main>
         <HeroSection />
-        <PillarsSection />
-        <MethodSection />
-        <MenopauseSection />
-        <FaqSection />
+        <ServicesSection />
+        <SpecialtySection />
+        <GallerySection />
+        <TestimonialsSection />
         <ContactSection />
       </main>
       <SiteFooter />

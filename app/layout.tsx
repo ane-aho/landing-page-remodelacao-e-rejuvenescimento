@@ -10,15 +10,15 @@ const sans = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Remodelação & Rejuvenescimento | Terapia com Peptídeos',
+  title: 'Dra. Roseli Perfoll | Remodelação & Rejuvenescimento',
   description:
     'Protocolos personalizados com terapia peptídica para reparo celular, equilíbrio hormonal, saúde sexual, metabolismo e longevidade. Reequilíbrio hormonal pós-menopausa com acompanhamento nutricional individualizado.',
   generator: 'v0.app',
   icons: {
     icon: [
       {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/images/logo.png',
+        type: 'image/png',
       },
     ],
   },
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   colorScheme: 'light dark',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#e8e9ee' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: '(prefers-color-scheme: light)', color: '#f1e6e8' },
+    { media: '(prefers-color-scheme: dark)', color: '#15181d' },
   ],
 }
 

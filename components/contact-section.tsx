@@ -1,108 +1,105 @@
-"use client"
-
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
+import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import { WHATSAPP_LINK } from "@/lib/contact"
-import { Loader2, CheckCircle2 } from "lucide-react"
 
-type Status = "idle" | "loading" | "success" | "error"
+const hours = [
+  ["Segunda a Sexta", "8:00 - 12:00"],
+  ["Segunda a Sexta", "14:00 - 18:00"],
+  ["Sábados", "8:00 - 12:00"],
+]
 
 export function ContactSection() {
-  const [status, setStatus] = useState<Status>("idle")
-  const endpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT
-
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    if (!endpoint) {
-      setStatus("error")
-      return
-    }
-    setStatus("loading")
-    const formData = new FormData(event.currentTarget)
-    try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
-      })
-      if (response.ok) {
-        setStatus("success")
-        event.currentTarget.reset()
-      } else {
-        setStatus("error")
-      }
-    } catch {
-      setStatus("error")
-    }
-  }
-
   return (
-    <section id="contato" className="py-20 md:py-28">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 md:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-        <div className="space-y-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Contato</p>
-          <h2 className="text-balance font-display text-3xl font-semibold text-foreground sm:text-4xl">
-            Comece sua avaliação inicial
-          </h2>
-          <p className="text-pretty leading-relaxed text-muted-foreground">
-            Preencha o formulário ou fale diretamente pelo WhatsApp. Nossa equipe entra em
-            contato para entender seu caso e agendar a primeira avaliação.
-          </p>
+    <section id="contato" className="bg-secondary/40 py-20 md:py-28">
+      <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
+        <h2 className="text-balance font-display text-3xl font-semibold text-foreground sm:text-4xl">
+          Agende sua consulta, sem complicações
+        </h2>
+        <p className="mt-4 text-pretty text-muted-foreground">
+          Escreva pelo meio que preferir; será um prazer te acompanhar.
+        </p>
+      </div>
+
+      <div className="mx-auto mt-10 max-w-5xl overflow-hidden rounded-3xl border border-border bg-card shadow-sm">
+        <div className="grid lg:grid-cols-2">
+          <div className="space-y-6 p-8 sm:p-10">
+            <div className="flex items-start gap-3">
+              <Phone className="mt-0.5 h-5 w-5 shrink-0 text-copper" />
+              <div>
+                <p className="text-sm font-semibold text-foreground">Telefone</p>
+                <p className="text-sm text-muted-foreground">+55 (00) 00000-0000</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <Mail className="mt-0.5 h-5 w-5 shrink-0 text-copper" />
+              <div>
+                <p className="text-sm font-semibold text-foreground">E-mail</p>
+                <p className="text-sm text-muted-foreground">contato@drroselperfoll.com</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-copper" />
+              <div>
+                <p className="text-sm font-semibold text-foreground">Localização</p>
+                <p className="text-sm text-muted-foreground">Endereço do consultório</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <Clock className="mt-0.5 h-5 w-5 shrink-0 text-copper" />
+              <div className="space-y-1">
+                <p className="text-sm font-semibold text-foreground">Horários de atendimento</p>
+                {hours.map(([day, time]) => (
+                  <p key={day + time} className="text-sm text-muted-foreground">
+                    {day}: {time}
+                  </p>
+                ))}
+              </div>
+            </div>
+            <div className="flex items-center gap-3 pt-2">
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:text-copper"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                </svg>
+              </a>
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:text-copper"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
+                  <path d="M13.5 21v-7.5h2.5l.4-3H13.5V8.5c0-.87.24-1.46 1.5-1.46h1.6V4.35C16.3 4.24 15.4 4.1 14.3 4.1c-2.28 0-3.84 1.39-3.84 3.94V10.5H8v3h2.46V21h3.04z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div className="min-h-[280px] border-t border-border lg:border-l lg:border-t-0">
+            <iframe
+              title="Mapa da localização"
+              src="https://www.google.com/maps?q=Brasil&output=embed"
+              className="h-full w-full grayscale"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center gap-4 border-t border-border p-8 text-center">
+          <p className="text-sm text-muted-foreground">Prefere escrever? Te respondemos por WhatsApp.</p>
           <Button
             render={<a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" />}
             nativeButton={false}
-            variant="outline"
             size="lg"
             className="px-6 text-base"
           >
-            Falar pelo WhatsApp
+            Agendar Consulta
           </Button>
         </div>
-
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-5 rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8"
-        >
-          <div className="grid gap-5 sm:grid-cols-2">
-            <div className="space-y-2">
-              <Label htmlFor="name">Nome</Label>
-              <Input id="name" name="name" required placeholder="Seu nome completo" />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="phone">Telefone / WhatsApp</Label>
-              <Input id="phone" name="phone" required placeholder="(00) 00000-0000" />
-            </div>
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="email">E-mail</Label>
-            <Input id="email" name="email" type="email" required placeholder="voce@email.com" />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="message">Conte um pouco sobre seu objetivo</Label>
-            <Textarea
-              id="message"
-              name="message"
-              placeholder="Ex: reequilíbrio hormonal, metabolismo, longevidade..."
-            />
-          </div>
-          <Button type="submit" disabled={status === "loading"} className="w-full sm:w-auto">
-            {status === "loading" && <Loader2 className="h-4 w-4 animate-spin" />}
-            Enviar solicitação
-          </Button>
-          {status === "success" && (
-            <p className="flex items-center gap-2 text-sm text-copper">
-              <CheckCircle2 className="h-4 w-4" /> Mensagem enviada! Em breve entraremos em contato.
-            </p>
-          )}
-          {status === "error" && (
-            <p className="text-sm text-destructive">
-              Não foi possível enviar agora. Tente novamente ou fale pelo WhatsApp.
-            </p>
-          )}
-        </form>
       </div>
     </section>
   )

@@ -1,0 +1,61 @@
+import { Star } from "lucide-react"
+
+const testimonials = [
+  {
+    quote:
+      "Excelente profissional, muito atenciosa. Me explicou tudo com detalhe e me senti muito segura durante todo o processo.",
+    name: "Paciente A.",
+  },
+  {
+    quote:
+      "Recomendo amplamente. Depois de anos buscando resposta, a Dra. Roseli foi quem realmente me deu um protocolo eficaz.",
+    name: "Paciente B.",
+  },
+  {
+    quote:
+      "Atendimento de primeira, espaço impecável e a doutora é muito atenta. Sem dúvida a melhor experiência que já tive.",
+    name: "Paciente C.",
+  },
+]
+
+export function TestimonialsSection() {
+  return (
+    <section id="depoimentos" className="border-b border-border py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-4 md:px-6">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+            Notas de agradecimento
+          </p>
+          <h2 className="mt-3 text-balance font-display text-3xl font-semibold text-foreground sm:text-4xl">
+            O que dizem nossas pacientes
+          </h2>
+          <p className="mt-4 text-pretty text-muted-foreground">
+            Histórias reais de pessoas que hoje se sentem melhor.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-6 sm:grid-cols-3">
+          {testimonials.map(({ quote, name }) => (
+            <div key={name} className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm">
+              <div className="flex gap-0.5 text-copper">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-current" />
+                ))}
+              </div>
+              <p className="text-sm leading-relaxed text-muted-foreground">&ldquo;{quote}&rdquo;</p>
+              <div className="mt-auto flex items-center gap-2">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-xs font-semibold text-copper">
+                  {name.charAt(0)}
+                </span>
+                <div className="leading-tight">
+                  <p className="text-sm font-medium text-foreground">{name}</p>
+                  <p className="text-xs text-muted-foreground">Paciente</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

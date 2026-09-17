@@ -7,10 +7,10 @@ import { Menu, X } from "lucide-react"
 import { WHATSAPP_LINK } from "@/lib/contact"
 
 const navLinks = [
-  { href: "#pilares", label: "Pilares" },
-  { href: "#metodo", label: "Método" },
-  { href: "#pos-menopausa", label: "Pós-menopausa" },
-  { href: "#como-funciona", label: "Como funciona" },
+  { href: "#servicos", label: "Serviços" },
+  { href: "#especialidade", label: "Especialidade" },
+  { href: "#espaco", label: "Espaço" },
+  { href: "#depoimentos", label: "Depoimentos" },
   { href: "#contato", label: "Contato" },
 ]
 
