@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Sparkles } from "lucide-react"
 import { WHATSAPP_LINK } from "@/lib/contact"
@@ -13,7 +14,7 @@ export function HeroSection() {
             <Sparkles className="h-3.5 w-3.5" />
             Ginecologista
           </span>
-          <h1 className="text-balance font-display text-6xl font-semibold leading-[1.05] text-primary sm:text-7xl">
+          <h1 className="text-balance font-display text-7xl font-semibold leading-[1.03] text-primary sm:text-8xl">
             Dra.
             <br />
             Roseli Perfoll
@@ -26,26 +27,27 @@ export function HeroSection() {
             metabolismo e a longevidade, remodele o seu corpo e rejuvenesça por dentro.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button render={<a href="#contato" />} nativeButton={false} size="lg" className="px-6 text-base">
-              Agendar avaliação
-            </Button>
             <Button
               render={<a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" />}
               nativeButton={false}
-              variant="outline"
               size="lg"
               className="px-6 text-base"
             >
-              Conhecer mais
+              Agendar avaliação
             </Button>
           </div>
         </div>
 
         <div className="relative">
-          <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-secondary via-rose/20 to-accent shadow-sm">
-            <div className="flex h-full w-full items-center justify-center">
-              <span className="text-sm text-muted-foreground">Foto da Dra. Roseli Perfoll</span>
-            </div>
+          <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-3xl border border-border shadow-sm">
+            <Image
+              src="/images/dra-roseli.jpg"
+              alt="Dra. Roseli Perfoll"
+              fill
+              priority
+              className="object-cover"
+              sizes="(min-width: 1024px) 28rem, 90vw"
+            />
           </div>
         </div>
       </div>
