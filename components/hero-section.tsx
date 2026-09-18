@@ -21,22 +21,10 @@ export function HeroSection() {
           <p className="text-sm font-medium uppercase tracking-[0.1em] text-copper">
             Remodele o corpo &amp; rejuvenesça por dentro com terapia peptídica
           </p>
-          <div className="max-w-lg space-y-4 text-pretty leading-relaxed text-muted-foreground">
-            <p>
-              Envelhecer traz mudanças que ninguém nos conta direito: o corpo não responde mais
-              como antes, falta energia, a pele perde o brilho e os sintomas da menopausa
-              aparecem sem aviso.
-            </p>
-            <p>
-              Você não precisa aceitar calada o que pode ser transformado — você merece se
-              sentir bem em cada fase da vida.
-            </p>
-            <p>
-              Com protocolos personalizados que apoiam o reparo celular, a função hormonal, o
-              metabolismo e a longevidade, remodele o seu corpo e rejuvenesça por dentro.
-            </p>
-            <p className="font-medium text-copper">Junto com você nessa jornada.</p>
-          </div>
+          <p className="max-w-lg text-pretty leading-relaxed text-muted-foreground">
+            Com protocolos personalizados que apoiam o reparo celular, a função hormonal, o
+            metabolismo e a longevidade, remodele o seu corpo e rejuvenesça por dentro.
+          </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button render={<a href="#contato" />} nativeButton={false} size="lg" className="px-6 text-base">
               Agendar avaliação
