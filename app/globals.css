@@ -56,19 +56,19 @@
   color-scheme: light;
   /* Dra. Roseli Perfoll — graphite #282C32 (soft blend of ink #15181D + slate #3B3F47), blush #F1E6E8, rose #D89AA7, deep rose #B85C6A */
   --background: #f1e6e8;
-  --foreground: #282c32;
+  --foreground: #3b3f47;
   --card: #ffffff;
-  --card-foreground: #282c32;
+  --card-foreground: #3b3f47;
   --popover: #ffffff;
-  --popover-foreground: #282c32;
-  --primary: #282c32;
+  --popover-foreground: #3b3f47;
+  --primary: #3b3f47;
   --primary-foreground: #f1e6e8;
   --secondary: #f1e6e8;
-  --secondary-foreground: #282c32;
+  --secondary-foreground: #3b3f47;
   --muted: #e7d9dc;
   --muted-foreground: #3b3f47;
   --accent: #f6ecee;
-  --accent-foreground: #282c32;
+  --accent-foreground: #3b3f47;
   --copper: #b85c6a;
   --copper-foreground: #ffffff;
   --rose: #d89aa7;

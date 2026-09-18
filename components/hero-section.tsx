@@ -13,7 +13,7 @@ export function HeroSection() {
             <Sparkles className="h-3.5 w-3.5" />
             Ginecologista
           </span>
-          <h1 className="text-balance font-display text-5xl font-semibold leading-[1.05] text-primary sm:text-6xl">
+          <h1 className="text-balance font-display text-6xl font-semibold leading-[1.05] text-primary sm:text-7xl">
             Dra.
             <br />
             Roseli Perfoll
