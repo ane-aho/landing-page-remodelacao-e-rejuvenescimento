@@ -16,16 +16,19 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="relative mx-auto mt-12 aspect-[4/5] max-w-md overflow-hidden rounded-3xl border border-border shadow-sm">
-          <video
-            src="/videos/dra-roseli-intro.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            controls
-            className="h-full w-full object-cover"
-          />
+        <div className="mt-12 grid gap-8 lg:grid-cols-[minmax(0,26rem)_1fr] lg:items-center">
+          <div className="relative aspect-[3/5] w-full max-w-md overflow-hidden rounded-3xl border border-border shadow-sm">
+            <video
+              src="/videos/dra-roseli-intro.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              controls
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div />
         </div>
       </div>
     </section>
