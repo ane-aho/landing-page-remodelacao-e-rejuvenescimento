@@ -12,7 +12,7 @@ export function HeroSection() {
         <div className="space-y-6">
           <span className="inline-flex items-center gap-2 rounded-full border border-copper/30 bg-secondary/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-copper">
             <Sparkles className="h-3.5 w-3.5" />
-            Ginecologista
+            Ginecologista e Médica do Esporte
           </span>
           <h1 className="text-balance font-display text-6xl font-normal leading-[1.03] text-[#4B4B4B] sm:text-7xl">
             Dra.
@@ -20,11 +20,15 @@ export function HeroSection() {
             Roseli Perfoll
           </h1>
           <p className="text-sm font-medium uppercase tracking-[0.1em] text-copper">
-            Remodele o corpo &amp; rejuvenesça por dentro com terapia peptídica
+            Remodele seu corpo &amp; rejuvenesça por dentro
           </p>
-          <p className="max-w-lg text-pretty leading-relaxed text-muted-foreground">
-            Com protocolos personalizados que apoiam o reparo celular, a função hormonal, o
-            metabolismo e a longevidade, remodele o seu corpo e rejuvenesça por dentro.
+          <p className="max-w-lg text-pretty text-justify leading-relaxed text-muted-foreground">
+            Você não precisa mais continuar tentando descobrir sozinha o que está acontecendo
+            com seu corpo, com a Dra. Roseli Perfoll, ginecologista e médica do esporte, você
+            terá um olhar completo sobre sua saúde. Do equilíbrio hormonal ao emagrecimento, do
+            bem-estar à estética, ela combina tratamentos como reposição hormonal, terapia com
+            peptídeos, medicamentos para controle de peso e outras abordagens — tudo sob medida
+            para você.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button
