@@ -36,7 +36,21 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+        <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+          <div className="relative">
+            <div className="relative mx-auto aspect-[3/5] max-w-md overflow-hidden rounded-3xl border border-border shadow-sm">
+              <video
+                src="/videos/dra-roseli-intro.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+
           <div className="flex flex-col items-center gap-6 sm:flex-row lg:items-stretch">
             {programs.map(({ href, icon: Icon, title, keywords, tagline }) => (
               <Link
@@ -57,20 +71,6 @@ export function ServicesSection() {
                 </span>
               </Link>
             ))}
-          </div>
-
-          <div className="relative">
-            <div className="relative mx-auto aspect-[3/5] max-w-md overflow-hidden rounded-3xl border border-border shadow-sm">
-              <video
-                src="/videos/dra-roseli-intro.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                controls
-                className="h-full w-full object-cover"
-              />
-            </div>
           </div>
         </div>
       </div>
