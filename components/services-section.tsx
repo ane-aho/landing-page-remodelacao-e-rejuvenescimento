@@ -48,22 +48,22 @@ export function ServicesSection() {
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
             {programs.map(({ href, icon: Icon, title, keywords, tagline }) => (
               <Link
                 key={href}
                 href={href}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-accent shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
               >
-                <div className="flex flex-1 flex-col items-center gap-4 px-8 py-10 text-center">
-                  <Icon className="h-10 w-10 text-primary" strokeWidth={1.25} />
-                  <h3 className="text-xl font-semibold text-primary">{title}</h3>
-                  <p className="text-sm font-semibold uppercase tracking-[0.14em] text-copper">
+                <div className="flex flex-1 flex-col items-center gap-2 px-6 py-6 text-center">
+                  <Icon className="h-8 w-8 text-primary" strokeWidth={1} />
+                  <h3 className="font-bold text-primary">{title}</h3>
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
                     {keywords}
                   </p>
-                  <p className="text-muted-foreground">{tagline}</p>
+                  <p className="text-sm text-muted-foreground">{tagline}</p>
                 </div>
-                <span className="bg-copper px-6 py-3 text-center text-xs font-semibold uppercase tracking-[0.1em] text-copper-foreground transition-colors group-hover:bg-copper/90">
+                <span className="bg-copper px-6 py-2.5 text-center text-xs font-semibold uppercase tracking-[0.1em] text-copper-foreground transition-colors group-hover:bg-copper/90">
                   Saiba mais
                 </span>
               </Link>
