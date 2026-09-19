@@ -33,7 +33,11 @@ export default function TerapiaPeptideosPage() {
         },
         {
           goal: "Preservar massa magra durante o emagrecimento",
-          compounds: "",
+          compounds: "Combinação GLP-1 + Peptídeos",
+        },
+        {
+          goal: "Skin & Hair",
+          compounds: "GHK-Cu (peptídeo para pele/cabelo)",
         },
       ]}
     />

@@ -91,7 +91,7 @@ export function ProgramPage({
                   {protocols.map(({ goal, compounds }) => (
                     <div
                       key={goal}
-                      className="rounded-2xl border border-border bg-card p-6 shadow-sm"
+                      className="rounded-2xl border border-border bg-accent p-6 shadow-sm"
                     >
                       <p className="font-semibold text-primary">{goal}</p>
                       {compounds && <p className="mt-2 text-sm text-copper">{compounds}</p>}
