@@ -25,9 +25,9 @@ export function ServicesSection() {
       <div className="pointer-events-none absolute -right-16 bottom-0 h-64 w-64 rounded-full bg-copper/10 blur-3xl" />
       <div className="relative mx-auto max-w-7xl px-4 md:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-balance text-4xl font-semibold text-primary sm:text-5xl">
-            Serviços pensados para você
-          </h2>
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+            Nossos Serviços
+          </p>
           <p className="mt-4 text-pretty text-muted-foreground">
             Cada protocolo é construído a partir da sua história clínica, exames e objetivos.
           </p>
