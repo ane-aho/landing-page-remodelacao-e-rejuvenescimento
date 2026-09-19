@@ -36,8 +36,8 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-[minmax(0,26rem)_1fr] lg:items-center">
-          <div className="relative aspect-[3/5] w-full max-w-md overflow-hidden rounded-3xl border border-border shadow-sm">
+        <div className="mt-12 flex flex-col items-start gap-8 lg:flex-row">
+          <div className="relative aspect-[3/5] w-full max-w-md shrink-0 overflow-hidden rounded-3xl border border-border shadow-sm">
             <video
               src="/videos/dra-roseli-intro.mp4"
               autoPlay
@@ -48,16 +48,16 @@ export function ServicesSection() {
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="flex flex-col items-start gap-5 sm:flex-row lg:flex-col">
+          <div className="flex flex-col items-start gap-6 sm:flex-row lg:flex-col">
             {programs.map(({ href, icon: Icon, title, keywords, tagline }) => (
               <Link
                 key={href}
                 href={href}
-                className="group flex w-full max-w-xs flex-col overflow-hidden rounded-2xl border border-border bg-accent shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+                className="group flex w-full max-w-sm flex-col overflow-hidden rounded-2xl border border-border bg-accent shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
               >
-                <div className="flex flex-1 flex-col items-center gap-2 px-6 py-6 text-center">
-                  <Icon className="h-8 w-8 text-primary" strokeWidth={1} />
-                  <h3 className="font-bold text-primary">{title}</h3>
+                <div className="flex flex-1 flex-col items-center gap-3 px-8 py-8 text-center">
+                  <Icon className="h-9 w-9 text-primary" strokeWidth={1} />
+                  <h3 className="text-2xl font-bold text-primary">{title}</h3>
                   <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
                     {keywords}
                   </p>
