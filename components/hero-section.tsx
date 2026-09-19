@@ -38,7 +38,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative pb-10 pl-10 sm:pb-16 sm:pl-16">
           <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-3xl border border-border shadow-sm">
             <Image
               src="/images/dra-roseli.jpg"
@@ -47,6 +47,16 @@ export function HeroSection() {
               priority
               className="object-cover"
               sizes="(min-width: 1024px) 28rem, 90vw"
+            />
+          </div>
+          <div className="absolute bottom-0 left-0 aspect-[3/4] w-32 overflow-hidden rounded-2xl border-4 border-background shadow-lg sm:w-44">
+            <video
+              src="/videos/dra-roseli-intro.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full object-cover"
             />
           </div>
         </div>
