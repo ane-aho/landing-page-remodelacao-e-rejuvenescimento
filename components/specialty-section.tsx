@@ -28,7 +28,7 @@ export function SpecialtySection() {
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
             Nossa especialidade
           </p>
-          <h2 className="mt-3 text-balance font-display text-3xl font-semibold text-primary sm:text-4xl">
+          <h2 className="mt-3 text-balance text-3xl font-semibold text-primary sm:text-4xl">
             Remodelação &amp; Rejuvenescimento
           </h2>
           <p className="mt-4 text-pretty text-muted-foreground">
@@ -56,7 +56,7 @@ export function SpecialtySection() {
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
               Conheça-me
             </p>
-            <h3 className="font-display text-3xl font-semibold text-primary sm:text-4xl">
+            <h3 className="text-3xl font-semibold text-primary sm:text-4xl">
               Dra. Roseli Perfoll
             </h3>
             <p className="text-pretty leading-relaxed text-muted-foreground">

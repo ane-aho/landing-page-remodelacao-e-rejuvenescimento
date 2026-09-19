@@ -27,7 +27,7 @@ export function TestimonialsSection() {
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
             Notas de agradecimento
           </p>
-          <h2 className="mt-3 text-balance font-display text-3xl font-semibold text-primary sm:text-4xl">
+          <h2 className="mt-3 text-balance text-3xl font-semibold text-primary sm:text-4xl">
             O que dizem nossas pacientes
           </h2>
           <p className="mt-4 text-pretty text-muted-foreground">
