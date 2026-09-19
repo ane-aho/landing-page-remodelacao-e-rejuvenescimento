@@ -1,15 +1,17 @@
 import Link from "next/link"
-import { ArrowUpRight } from "lucide-react"
+import { Activity, Dna } from "lucide-react"
 
 const programs = [
   {
     href: "/terapia-hormonal",
+    icon: Activity,
     title: "Terapia de Reposição Hormonal",
     keywords: "Energia. Clareza. Vitalidade.",
     tagline: "Sinta-se você de novo!",
   },
   {
     href: "/terapia-peptideos",
+    icon: Dna,
     title: "Terapia com Peptídeos",
     keywords: "Renove. Regenere. Revitalize.",
     tagline: "Viva sua melhor versão!",
@@ -47,20 +49,23 @@ export function ServicesSection() {
             />
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
-            {programs.map(({ href, title, keywords, tagline }) => (
+            {programs.map(({ href, icon: Icon, title, keywords, tagline }) => (
               <Link
                 key={href}
                 href={href}
-                className="group flex flex-col gap-3 rounded-3xl border border-border bg-card p-8 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
               >
-                <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-2xl font-semibold text-primary">{title}</h3>
-                  <ArrowUpRight className="h-5 w-5 shrink-0 text-copper transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <div className="flex flex-1 flex-col items-center gap-4 px-8 py-10 text-center">
+                  <Icon className="h-10 w-10 text-primary" strokeWidth={1.25} />
+                  <h3 className="text-xl font-semibold text-primary">{title}</h3>
+                  <p className="text-sm font-semibold uppercase tracking-[0.14em] text-copper">
+                    {keywords}
+                  </p>
+                  <p className="text-muted-foreground">{tagline}</p>
                 </div>
-                <p className="text-sm font-semibold uppercase tracking-[0.14em] text-copper">
-                  {keywords}
-                </p>
-                <p className="text-muted-foreground">{tagline}</p>
+                <span className="bg-copper px-6 py-3 text-center text-xs font-semibold uppercase tracking-[0.1em] text-copper-foreground transition-colors group-hover:bg-copper/90">
+                  Saiba mais
+                </span>
               </Link>
             ))}
           </div>
