@@ -12,7 +12,7 @@ export interface ProgramPageProps {
   keywords: string
   tagline: string
   intro: string
-  signsTitle?: string
+  preSigns?: string
   signs?: string[]
   paragraphs?: string[]
   closing?: string
@@ -24,7 +24,7 @@ export function ProgramPage({
   keywords,
   tagline,
   intro,
-  signsTitle,
+  preSigns,
   signs,
   paragraphs,
   closing,
@@ -60,9 +60,11 @@ export function ProgramPage({
 
             {signs && signs.length > 0 && (
               <>
-                <h2 className="mt-12 text-balance text-3xl font-semibold text-primary sm:text-4xl">
-                  {signsTitle ?? "Preste atenção aos sinais"}
-                </h2>
+                {preSigns && (
+                  <p className="mt-6 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
+                    {preSigns}
+                  </p>
+                )}
                 <ul className="mt-8 grid gap-4 sm:grid-cols-2">
                   {signs.map((sign) => (
                     <li key={sign} className="flex items-start gap-3">

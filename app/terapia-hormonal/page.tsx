@@ -13,7 +13,8 @@ export default function TerapiaHormonalPage() {
       title="Terapia de Reposição Hormonal"
       keywords="Energia. Clareza. Vitalidade."
       tagline="Sinta-se você de novo!"
-      intro="Ignorar os sinais de desequilíbrio hormonal é deixar seu corpo lidar sozinho com mudanças profundas. Se você se identifica com boa parte desta lista, preste atenção:"
+      intro="Ignorar os sinais de desequilíbrio hormonal é deixar seu corpo lidar sozinho com mudanças profundas."
+      preSigns="Se você se identifica com boa parte desta lista, preste atenção:"
       signs={[
         "Cansaço constante",
         "Dificuldade para concentrar",
