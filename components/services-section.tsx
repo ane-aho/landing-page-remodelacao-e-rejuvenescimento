@@ -15,6 +15,18 @@ export function ServicesSection() {
             Cada protocolo é construído a partir da sua história clínica, exames e objetivos.
           </p>
         </div>
+
+        <div className="relative mx-auto mt-12 aspect-[4/5] max-w-md overflow-hidden rounded-3xl border border-border shadow-sm">
+          <video
+            src="/videos/dra-roseli-intro.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            controls
+            className="h-full w-full object-cover"
+          />
+        </div>
       </div>
     </section>
   )
