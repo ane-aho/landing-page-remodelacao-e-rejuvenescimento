@@ -48,12 +48,12 @@ export function ServicesSection() {
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
+          <div className="flex flex-col items-start gap-5 sm:flex-row lg:flex-col">
             {programs.map(({ href, icon: Icon, title, keywords, tagline }) => (
               <Link
                 key={href}
                 href={href}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-accent shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+                className="group flex w-full max-w-xs flex-col overflow-hidden rounded-2xl border border-border bg-accent shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
               >
                 <div className="flex flex-1 flex-col items-center gap-2 px-6 py-6 text-center">
                   <Icon className="h-8 w-8 text-primary" strokeWidth={1} />
