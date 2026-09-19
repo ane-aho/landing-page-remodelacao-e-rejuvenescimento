@@ -17,6 +17,8 @@ export interface ProgramPageProps {
   paragraphs?: string[]
   closing?: string
   benefits?: string[]
+  protocolsTitle?: string
+  protocols?: { goal: string; compounds: string }[]
 }
 
 export function ProgramPage({
@@ -29,8 +31,10 @@ export function ProgramPage({
   paragraphs,
   closing,
   benefits,
+  protocolsTitle,
+  protocols,
 }: ProgramPageProps) {
-  const narrative = Boolean(signs && signs.length > 0)
+  const narrative = Boolean((signs && signs.length > 0) || (protocols && protocols.length > 0))
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -75,6 +79,25 @@ export function ProgramPage({
                     </li>
                   ))}
                 </ul>
+              </>
+            )}
+
+            {protocols && protocols.length > 0 && (
+              <>
+                <h2 className="mt-12 text-balance text-3xl font-semibold text-primary sm:text-4xl">
+                  {protocolsTitle ?? "Protocolos"}
+                </h2>
+                <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                  {protocols.map(({ goal, compounds }) => (
+                    <div
+                      key={goal}
+                      className="rounded-2xl border border-border bg-card p-6 shadow-sm"
+                    >
+                      <p className="font-semibold text-primary">{goal}</p>
+                      {compounds && <p className="mt-2 text-sm text-copper">{compounds}</p>}
+                    </div>
+                  ))}
+                </div>
               </>
             )}
 

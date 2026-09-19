@@ -13,13 +13,28 @@ export default function TerapiaPeptideosPage() {
       title="Terapia com Peptídeos"
       keywords="Renove. Regenere. Revitalize."
       tagline="Viva sua melhor versão!"
-      intro="Peptídeos são pequenas cadeias de aminoácidos que atuam como mensageiros no organismo, sinalizando processos naturais de reparo celular, produção hormonal e regulação metabólica. Cada protocolo é individualizado a partir da sua avaliação clínica e laboratorial."
-      benefits={[
-        "Apoio ao reparo celular e à recuperação de tecidos",
-        "Suporte ao metabolismo e à composição corporal",
-        "Ação anti-inflamatória",
-        "Suporte à longevidade e à vitalidade",
-        "Acompanhamento clínico contínuo, com nutrição personalizada",
+      intro="A terapia com peptídeos pode ser a chave para você voltar a se sentir bem. Com protocolos personalizados que apoiam o reparo celular, a função hormonal, o metabolismo e a longevidade, remodele o seu corpo e rejuvenesça por dentro."
+      protocols={[
+        {
+          goal: "Ganho de massa magra e perda de gordura",
+          compounds: "CJC-1295 + Ipamorelin",
+        },
+        {
+          goal: "Oxidação de gordura",
+          compounds: "MOTS-c, AOD-9604",
+        },
+        {
+          goal: "Libido e energia",
+          compounds: "PT-141 (Bremelanotide)",
+        },
+        {
+          goal: "Recuperação e anti-inflamatório",
+          compounds: "BPC-157",
+        },
+        {
+          goal: "Preservar massa magra durante o emagrecimento",
+          compounds: "",
+        },
       ]}
     />
   )
