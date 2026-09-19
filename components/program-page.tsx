@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowLeft, CheckCircle2 } from "lucide-react"
+import { ArrowLeft, AlertCircle, CheckCircle2 } from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
@@ -12,10 +12,24 @@ export interface ProgramPageProps {
   keywords: string
   tagline: string
   intro: string
-  benefits: string[]
+  signsTitle?: string
+  signs?: string[]
+  paragraphs?: string[]
+  closing?: string
+  benefits?: string[]
 }
 
-export function ProgramPage({ title, keywords, tagline, intro, benefits }: ProgramPageProps) {
+export function ProgramPage({
+  title,
+  keywords,
+  tagline,
+  intro,
+  signsTitle,
+  signs,
+  paragraphs,
+  closing,
+  benefits,
+}: ProgramPageProps) {
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <SiteHeader />
@@ -54,23 +68,67 @@ export function ProgramPage({ title, keywords, tagline, intro, benefits }: Progr
           </div>
         </section>
 
-        <section className="border-t border-border bg-secondary/40 py-16 md:py-24">
-          <div className="mx-auto max-w-3xl px-4 md:px-6">
-            <h2 className="text-balance text-3xl font-semibold text-primary sm:text-4xl">
-              Benefícios do protocolo
-            </h2>
-            <ul className="mt-8 space-y-4">
-              {benefits.map((benefit) => (
-                <li key={benefit} className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-copper" />
-                  <span className="text-pretty leading-relaxed text-muted-foreground">
-                    {benefit}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        {signs && signs.length > 0 && (
+          <section className="border-t border-border bg-secondary/40 py-16 md:py-24">
+            <div className="mx-auto max-w-3xl px-4 md:px-6">
+              <h2 className="text-balance text-3xl font-semibold text-primary sm:text-4xl">
+                {signsTitle ?? "Preste atenção aos sinais"}
+              </h2>
+              <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+                {signs.map((sign) => (
+                  <li key={sign} className="flex items-start gap-3">
+                    <AlertCircle className="mt-0.5 h-5 w-5 shrink-0 text-copper" />
+                    <span className="text-pretty leading-relaxed text-muted-foreground">
+                      {sign}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
+
+        {paragraphs && paragraphs.length > 0 && (
+          <section className="border-t border-border py-16 md:py-24">
+            <div className="mx-auto max-w-3xl px-4 md:px-6">
+              <div className="space-y-5">
+                {paragraphs.map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className="text-pretty text-justify leading-relaxed text-muted-foreground"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+              {closing && (
+                <p className="mt-8 text-balance text-2xl font-semibold text-primary">
+                  {closing}
+                </p>
+              )}
+            </div>
+          </section>
+        )}
+
+        {benefits && benefits.length > 0 && (
+          <section className="border-t border-border bg-secondary/40 py-16 md:py-24">
+            <div className="mx-auto max-w-3xl px-4 md:px-6">
+              <h2 className="text-balance text-3xl font-semibold text-primary sm:text-4xl">
+                Benefícios do protocolo
+              </h2>
+              <ul className="mt-8 space-y-4">
+                {benefits.map((benefit) => (
+                  <li key={benefit} className="flex items-start gap-3">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-copper" />
+                    <span className="text-pretty leading-relaxed text-muted-foreground">
+                      {benefit}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
         <ContactSection />
       </main>
