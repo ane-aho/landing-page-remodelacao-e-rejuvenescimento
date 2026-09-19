@@ -30,6 +30,8 @@ export function ProgramPage({
   closing,
   benefits,
 }: ProgramPageProps) {
+  const narrative = Boolean(signs && signs.length > 0)
+
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <SiteHeader />
@@ -55,43 +57,27 @@ export function ProgramPage({
             <p className="mt-8 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
               {intro}
             </p>
-            <div className="mt-8">
-              <Button
-                render={<a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" />}
-                nativeButton={false}
-                size="lg"
-                className="px-6 text-base"
-              >
-                Agendar avaliação
-              </Button>
-            </div>
-          </div>
-        </section>
 
-        {signs && signs.length > 0 && (
-          <section className="border-t border-border bg-secondary/40 py-16 md:py-24">
-            <div className="mx-auto max-w-3xl px-4 md:px-6">
-              <h2 className="text-balance text-3xl font-semibold text-primary sm:text-4xl">
-                {signsTitle ?? "Preste atenção aos sinais"}
-              </h2>
-              <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-                {signs.map((sign) => (
-                  <li key={sign} className="flex items-start gap-3">
-                    <AlertCircle className="mt-0.5 h-5 w-5 shrink-0 text-copper" />
-                    <span className="text-pretty leading-relaxed text-muted-foreground">
-                      {sign}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </section>
-        )}
+            {signs && signs.length > 0 && (
+              <>
+                <h2 className="mt-12 text-balance text-3xl font-semibold text-primary sm:text-4xl">
+                  {signsTitle ?? "Preste atenção aos sinais"}
+                </h2>
+                <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+                  {signs.map((sign) => (
+                    <li key={sign} className="flex items-start gap-3">
+                      <AlertCircle className="mt-0.5 h-5 w-5 shrink-0 text-copper" />
+                      <span className="text-pretty leading-relaxed text-muted-foreground">
+                        {sign}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
 
-        {paragraphs && paragraphs.length > 0 && (
-          <section className="border-t border-border py-16 md:py-24">
-            <div className="mx-auto max-w-3xl px-4 md:px-6">
-              <div className="space-y-5">
+            {paragraphs && paragraphs.length > 0 && (
+              <div className="mt-10 space-y-5">
                 {paragraphs.map((paragraph, index) => (
                   <p
                     key={index}
@@ -101,14 +87,39 @@ export function ProgramPage({
                   </p>
                 ))}
               </div>
-              {closing && (
-                <p className="mt-8 text-balance text-2xl font-semibold text-primary">
-                  {closing}
-                </p>
-              )}
-            </div>
-          </section>
-        )}
+            )}
+
+            {closing && (
+              <p className="mt-8 text-balance text-2xl font-semibold text-primary">{closing}</p>
+            )}
+
+            {!narrative && (
+              <div className="mt-8">
+                <Button
+                  render={<a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" />}
+                  nativeButton={false}
+                  size="lg"
+                  className="px-6 text-base"
+                >
+                  Agendar avaliação
+                </Button>
+              </div>
+            )}
+
+            {narrative && (
+              <div className="mt-10">
+                <Button
+                  render={<a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" />}
+                  nativeButton={false}
+                  size="lg"
+                  className="px-6 text-base"
+                >
+                  Agendar sua consulta
+                </Button>
+              </div>
+            )}
+          </div>
+        </section>
 
         {benefits && benefits.length > 0 && (
           <section className="border-t border-border bg-secondary/40 py-16 md:py-24">
@@ -130,7 +141,7 @@ export function ProgramPage({
           </section>
         )}
 
-        <ContactSection />
+        {!narrative && <ContactSection />}
       </main>
       <SiteFooter />
       <WhatsAppButton />

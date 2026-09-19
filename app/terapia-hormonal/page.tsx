@@ -29,7 +29,6 @@ export default function TerapiaHormonalPage() {
         "Na perimenopausa e na menopausa, os níveis de estrogênio e progesterona caem de forma brusca. O corpo sente. E muito.",
         "Sob a liderança da médica Dra. Roseli Perfoll, oferecemos um plano personalizado baseado em diálogo aberto, exames laboratoriais detalhados e reposição hormonal bioidêntica planejada para você.",
       ]}
-      closing="Recupere sua energia, clareza e vitalidade. Volte a se sentir você."
     />
   )
 }
