@@ -31,13 +31,13 @@ export function SpecialtySection() {
           <h2 className="mt-3 text-balance text-3xl font-semibold text-primary sm:text-4xl">
             Remodelação &amp; Rejuvenescimento
           </h2>
-          <p className="mt-4 text-pretty text-justify leading-relaxed text-muted-foreground">
-            Cada pessoa tem uma história, um corpo e objetivos únicos. Estas imagens retratam
-            pacientes reais que escolheram cuidar de si e compartilhar parte de sua experiência
-            conosco. Para nós, cada transformação representa, antes de tudo, uma jornada de
-            cuidado, saúde e autoestima.
-          </p>
         </div>
+        <p className="mt-4 text-pretty text-justify leading-relaxed text-muted-foreground">
+          Cada pessoa tem uma história, um corpo e objetivos únicos. Estas imagens retratam
+          pacientes reais que escolheram cuidar de si e compartilhar parte de sua experiência
+          conosco. Para nós, cada transformação representa, antes de tudo, uma jornada de
+          cuidado, saúde e autoestima.
+        </p>
 
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3">
           {[1, 2, 3].map((i) => (
