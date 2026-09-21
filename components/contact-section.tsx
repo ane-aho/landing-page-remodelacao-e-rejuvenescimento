@@ -11,9 +11,9 @@ export function ContactSection() {
         src="/images/rose-watermark.png"
         alt=""
         aria-hidden="true"
-        width={137}
-        height={167}
-        className="pointer-events-none absolute -bottom-10 -right-10 h-64 w-auto opacity-15 sm:h-80"
+        width={122}
+        height={172}
+        className="pointer-events-none absolute -bottom-16 -right-16 h-[26rem] w-auto opacity-20 sm:-right-10 sm:h-[34rem]"
       />
 
       <div className="relative mx-auto max-w-7xl border-t border-border px-4 pt-14 md:px-6">
