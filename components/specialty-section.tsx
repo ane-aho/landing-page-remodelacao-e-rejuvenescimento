@@ -24,7 +24,7 @@ export function SpecialtySection() {
     <section id="especialidade" className="relative overflow-hidden py-20 md:py-28">
       <div className="relative mx-auto max-w-7xl px-4 md:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+          <p className="text-sm font-semibold uppercase tracking-[0.14em] text-copper">
             Nossa especialidade
           </p>
           <h2 className="mt-3 text-balance text-3xl font-semibold text-primary sm:text-4xl">
@@ -46,19 +46,19 @@ export function SpecialtySection() {
           ))}
         </div>
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-[1.15fr_1fr] lg:items-center">
-          <div className="relative aspect-square w-full overflow-hidden">
+        <div className="mt-14 grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+          <div className="relative aspect-[2/3] w-full overflow-hidden">
             <Image
               src="/images/dra-roseli-bio.jpg"
               alt="Dra. Roseli Perfoll"
               fill
-              className="object-contain"
+              className="object-cover"
               sizes="(min-width: 1024px) 40rem, 95vw"
             />
           </div>
 
           <div className="space-y-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-copper">
               Sobre a Doutora
             </p>
             <h3 className="font-display text-3xl font-normal text-[#4B4B4B] sm:text-4xl">

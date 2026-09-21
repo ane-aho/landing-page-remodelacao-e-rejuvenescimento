@@ -3,7 +3,7 @@ export function GallerySection() {
     <section id="espaco" className="relative overflow-hidden py-20 md:py-28">
       <div className="relative mx-auto max-w-7xl px-4 md:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+          <p className="text-sm font-semibold uppercase tracking-[0.14em] text-copper">
             Conheça nosso espaço
           </p>
           <h2 className="mt-3 text-balance text-3xl font-semibold text-primary sm:text-4xl">

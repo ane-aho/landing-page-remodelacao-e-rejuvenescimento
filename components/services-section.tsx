@@ -20,17 +20,17 @@ export function ServicesSection() {
     <section id="servicos" className="relative overflow-hidden py-20 md:py-28">
       <div className="relative mx-auto max-w-7xl px-4 md:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+          <p className="text-sm font-semibold uppercase tracking-[0.14em] text-copper">
             Nossos Serviços
           </p>
-          <p className="mt-4 text-pretty text-muted-foreground">
-            Cada protocolo é construído a partir da sua história clínica, exames e objetivos.
+          <p className="mt-4 text-pretty text-lg font-semibold uppercase tracking-wide text-primary">
+            Onde saúde, emagrecimento e estética se unem
           </p>
         </div>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
           <div className="relative">
-            <div className="relative mx-auto aspect-square w-full max-w-xl overflow-hidden">
+            <div className="relative mx-auto aspect-[3/5] w-full overflow-hidden">
               <video
                 src="/videos/dra-roseli-intro.mp4"
                 autoPlay
@@ -38,19 +38,19 @@ export function ServicesSection() {
                 muted
                 playsInline
                 controls
-                className="h-full w-full object-contain"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-6 sm:flex-row lg:items-stretch">
+          <div className="flex flex-col items-start gap-5">
             {programs.map(({ href, title, keywords, tagline }) => (
               <Link
                 key={href}
                 href={href}
-                className="group flex aspect-square w-full max-w-sm flex-col items-center justify-center gap-3 border border-border px-6 text-center transition-colors hover:border-copper"
+                className="group flex aspect-square w-full max-w-[15rem] flex-col items-start justify-center gap-2 border border-border px-6 text-left transition-colors hover:border-copper"
               >
-                <h3 className="text-2xl font-bold text-primary">{title}</h3>
+                <h3 className="text-xl font-bold text-primary">{title}</h3>
                 <p className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.14em] text-copper">
                   {keywords}
                 </p>
