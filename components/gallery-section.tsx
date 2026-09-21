@@ -37,13 +37,13 @@ export function GallerySection() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative aspect-[4/3] w-40 shrink-0 overflow-hidden bg-muted sm:w-48"
+              className="group relative aspect-[3/4] w-40 shrink-0 overflow-hidden bg-muted sm:w-48"
             >
               <Image
                 src={cover}
                 alt={`Vídeo ${index + 1} da Dra. Roseli Perfoll no Instagram`}
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 sizes="192px"
               />
               <span className="absolute bottom-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-background/80 text-primary transition-colors group-hover:bg-copper group-hover:text-copper-foreground">
