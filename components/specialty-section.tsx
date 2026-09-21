@@ -5,7 +5,8 @@ const credentials = [
   {
     icon: Sparkles,
     title: "Especialidade",
-    description: "Ginecologia, Medicina do Esporte e Sexologia",
+    description: "Ginecologia e Obstetrícia",
+    description2: "Medicina e Nutrição do Esporte",
   },
   {
     icon: ShieldCheck,
@@ -89,7 +90,7 @@ export function SpecialtySection() {
               </p>
             </div>
             <div className="space-y-4 pt-2">
-              {credentials.map(({ icon: Icon, title, description }) => (
+              {credentials.map(({ icon: Icon, title, description, description2 }) => (
                 <div key={title} className="flex items-start gap-3">
                   <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-rose/25 text-copper">
                     <Icon className="h-4 w-4" />
@@ -97,6 +98,9 @@ export function SpecialtySection() {
                   <div>
                     <p className="text-sm font-semibold text-primary">{title}</p>
                     <p className="text-sm text-muted-foreground">{description}</p>
+                    {description2 && (
+                      <p className="text-sm text-muted-foreground">{description2}</p>
+                    )}
                   </div>
                 </div>
               ))}
