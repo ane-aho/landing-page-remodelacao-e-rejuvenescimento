@@ -19,6 +19,10 @@ export interface ProgramPageProps {
   benefits?: string[]
   protocolsTitle?: string
   protocols?: { goal: string; compounds: string }[]
+  includesTitle?: string
+  includes?: string[]
+  afterParagraphs?: string[]
+  narrative?: boolean
 }
 
 export function ProgramPage({
@@ -33,8 +37,16 @@ export function ProgramPage({
   benefits,
   protocolsTitle,
   protocols,
+  includesTitle,
+  includes,
+  afterParagraphs,
+  narrative: narrativeProp,
 }: ProgramPageProps) {
-  const narrative = Boolean((signs && signs.length > 0) || (protocols && protocols.length > 0))
+  const narrative =
+    narrativeProp ??
+    Boolean(
+      (signs && signs.length > 0) || (protocols && protocols.length > 0) || (includes && includes.length > 0),
+    )
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -99,6 +111,39 @@ export function ProgramPage({
             {paragraphs && paragraphs.length > 0 && (
               <div className="mt-10 space-y-5">
                 {paragraphs.map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className="text-pretty text-justify leading-relaxed text-muted-foreground"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            )}
+
+            {includes && includes.length > 0 && (
+              <>
+                {includesTitle && (
+                  <p className="mt-6 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
+                    {includesTitle}
+                  </p>
+                )}
+                <ul className="mt-6 space-y-3">
+                  {includes.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-copper" />
+                      <span className="text-pretty leading-relaxed text-muted-foreground">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+
+            {afterParagraphs && afterParagraphs.length > 0 && (
+              <div className="mt-8 space-y-5">
+                {afterParagraphs.map((paragraph, index) => (
                   <p
                     key={index}
                     className="text-pretty text-justify leading-relaxed text-muted-foreground"
