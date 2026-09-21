@@ -13,6 +13,18 @@ const programs = [
     keywords: "Renove. Regenere. Revitalize.",
     tagline: "Viva sua melhor versão!",
   },
+  {
+    href: "/suporte-nutricional",
+    title: "Suporte Nutricional e Metabólico",
+    keywords: "Nutrição. Equilíbrio. Cuidado.",
+    tagline: "Cuide de si, de dentro para fora",
+  },
+  {
+    href: "/saude-sexual",
+    title: "Saúde Sexual e Bem-Estar",
+    keywords: "Prazer. Confiança. Conexão.",
+    tagline: "Viva sua sexualidade com liberdade e confiança",
+  },
 ]
 
 export function ServicesSection() {
