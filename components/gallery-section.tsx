@@ -1,6 +1,14 @@
 import { Play } from "lucide-react"
 import { INSTAGRAM_HANDLE, INSTAGRAM_LINK } from "@/lib/contact"
 
+const reels = [
+  "https://www.instagram.com/reel/Db9CEKvJIll/",
+  INSTAGRAM_LINK,
+  INSTAGRAM_LINK,
+  INSTAGRAM_LINK,
+  INSTAGRAM_LINK,
+]
+
 export function GallerySection() {
   return (
     <section id="espaco" className="relative overflow-hidden py-20 md:py-28">
@@ -22,16 +30,16 @@ export function GallerySection() {
         </div>
 
         <div className="mt-12 flex flex-wrap justify-center gap-4">
-          {[1, 2, 3, 4, 5].map((i) => (
+          {reels.map((href, index) => (
             <a
-              key={i}
-              href={INSTAGRAM_LINK}
+              key={index}
+              href={href}
               target="_blank"
               rel="noopener noreferrer"
               className="group relative aspect-[4/3] w-40 shrink-0 overflow-hidden bg-muted sm:w-48"
             >
               <span className="absolute inset-0 flex items-center justify-center text-sm text-muted-foreground">
-                Vídeo {i}
+                Vídeo {index + 1}
               </span>
               <span className="absolute bottom-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-background/80 text-primary transition-colors group-hover:bg-copper group-hover:text-copper-foreground">
                 <Play className="h-4 w-4 fill-current" />
