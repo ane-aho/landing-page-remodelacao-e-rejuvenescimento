@@ -3,9 +3,9 @@ import { INSTAGRAM_HANDLE, INSTAGRAM_LINK } from "@/lib/contact"
 
 const reels = [
   "https://www.instagram.com/reel/Db9CEKvJIll/",
-  INSTAGRAM_LINK,
-  INSTAGRAM_LINK,
-  INSTAGRAM_LINK,
+  "https://www.instagram.com/reel/DZ-48clRIaB/",
+  "https://www.instagram.com/reel/DY24WaZxNwX/",
+  "https://www.instagram.com/reel/C_yzYBgulcE/",
   INSTAGRAM_LINK,
 ]
 
