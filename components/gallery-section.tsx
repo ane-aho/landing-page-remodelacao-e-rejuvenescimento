@@ -7,7 +7,7 @@ export function GallerySection() {
       <div className="relative mx-auto max-w-7xl px-4 md:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.14em] text-copper">
-            Conheça nosso espaço
+            Siga-me no Instagram
           </p>
           <h2 className="mt-3 text-balance text-3xl font-semibold text-primary sm:text-4xl">
             <a
@@ -16,19 +16,19 @@ export function GallerySection() {
               rel="noopener noreferrer"
               className="hover:text-copper"
             >
-              Siga-me no Instagram @{INSTAGRAM_HANDLE}
+              @{INSTAGRAM_HANDLE}
             </a>
           </h2>
         </div>
 
-        <div className="mt-12 flex gap-4 overflow-x-auto pb-2">
+        <div className="mt-12 flex flex-wrap justify-center gap-4">
           {[1, 2, 3, 4, 5].map((i) => (
             <a
               key={i}
               href={INSTAGRAM_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative aspect-[9/16] w-40 shrink-0 overflow-hidden bg-muted sm:w-48"
+              className="group relative aspect-[4/3] w-40 shrink-0 overflow-hidden bg-muted sm:w-48"
             >
               <span className="absolute inset-0 flex items-center justify-center text-sm text-muted-foreground">
                 Vídeo {i}
