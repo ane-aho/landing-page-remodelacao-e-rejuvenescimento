@@ -6,7 +6,7 @@ const reels = [
   "https://www.instagram.com/reel/DZ-48clRIaB/",
   "https://www.instagram.com/reel/DY24WaZxNwX/",
   "https://www.instagram.com/reel/C_yzYBgulcE/",
-  INSTAGRAM_LINK,
+  "https://www.instagram.com/reel/DbHKK7SRPeF/",
 ]
 
 export function GallerySection() {
