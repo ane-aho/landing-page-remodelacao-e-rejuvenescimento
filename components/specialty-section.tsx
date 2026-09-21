@@ -46,7 +46,7 @@ export function SpecialtySection() {
           ))}
         </div>
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div className="mt-14 grid gap-8 lg:grid-cols-[1.15fr_1fr] lg:items-center">
           <div className="relative aspect-square w-full overflow-hidden">
             <Image
               src="/images/dra-roseli-bio.jpg"
