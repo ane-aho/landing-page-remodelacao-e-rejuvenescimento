@@ -10,7 +10,7 @@ const hours = [
 
 export function ContactSection() {
   return (
-    <section id="contato" className="bg-secondary/40 py-20 md:py-28">
+    <section id="contato" className="py-20 md:py-28">
       <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
         <h2 className="text-balance text-3xl font-semibold text-primary sm:text-4xl">
           Agende sua consulta, sem complicações
@@ -20,7 +20,7 @@ export function ContactSection() {
         </p>
       </div>
 
-      <div className="mx-auto mt-10 max-w-5xl overflow-hidden rounded-3xl border border-border bg-card shadow-sm">
+      <div className="mx-auto mt-10 max-w-5xl">
         <div className="grid lg:grid-cols-2">
           <div className="space-y-6 p-8 sm:p-10">
             <div className="flex items-start gap-3">
@@ -79,7 +79,7 @@ export function ContactSection() {
             </div>
           </div>
 
-          <div className="min-h-[280px] border-t border-border lg:border-l lg:border-t-0">
+          <div className="relative aspect-square w-full">
             <iframe
               title="Mapa da localização"
               src="https://www.google.com/maps?q=Brasil&output=embed"
@@ -89,7 +89,7 @@ export function ContactSection() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-4 border-t border-border p-8 text-center">
+        <div className="flex flex-col items-center gap-4 p-8 text-center">
           <p className="text-sm text-muted-foreground">Prefere escrever? Te respondemos por WhatsApp.</p>
           <Button
             render={<a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" />}

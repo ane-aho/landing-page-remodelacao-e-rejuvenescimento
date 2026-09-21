@@ -21,9 +21,7 @@ const credentials = [
 
 export function SpecialtySection() {
   return (
-    <section id="especialidade" className="relative overflow-hidden bg-secondary/40 py-20 md:py-28">
-      <div className="pointer-events-none absolute -right-24 top-0 h-80 w-80 rounded-full bg-copper/10 blur-3xl" />
-      <div className="pointer-events-none absolute -left-16 bottom-10 h-64 w-64 rounded-full bg-rose/20 blur-3xl" />
+    <section id="especialidade" className="relative overflow-hidden py-20 md:py-28">
       <div className="relative mx-auto max-w-7xl px-4 md:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
@@ -41,15 +39,15 @@ export function SpecialtySection() {
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-border bg-gradient-to-br from-secondary via-rose/15 to-accent"
+              className="flex aspect-square items-center justify-center bg-muted"
             >
               <span className="text-sm text-muted-foreground">Foto do atendimento {i}</span>
             </div>
           ))}
         </div>
 
-        <div className="mt-14 grid gap-8 rounded-3xl border border-border bg-card p-8 sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border">
+        <div className="mt-14 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div className="relative aspect-square overflow-hidden">
             <Image
               src="/images/dra-roseli-bio.jpg"
               alt="Dra. Roseli Perfoll"

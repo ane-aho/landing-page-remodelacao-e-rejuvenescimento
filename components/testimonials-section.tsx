@@ -20,8 +20,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section id="depoimentos" className="relative overflow-hidden bg-gradient-to-b from-background to-secondary/40 py-20 md:py-28">
-      <div className="pointer-events-none absolute -right-20 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-copper/10 blur-3xl" />
+    <section id="depoimentos" className="relative overflow-hidden py-20 md:py-28">
       <div className="relative mx-auto max-w-7xl px-4 md:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
@@ -37,14 +36,14 @@ export function TestimonialsSection() {
 
         <div className="mt-12 grid gap-6 sm:grid-cols-3">
           {testimonials.map(({ quote, name }) => (
-            <div key={name} className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm">
-              <div className="flex gap-0.5 text-copper">
+            <div key={name} className="flex flex-col gap-4 p-6 text-center sm:text-left">
+              <div className="flex justify-center gap-0.5 text-copper sm:justify-start">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="h-4 w-4 fill-current" />
                 ))}
               </div>
               <p className="text-sm leading-relaxed text-muted-foreground">&ldquo;{quote}&rdquo;</p>
-              <div className="mt-auto flex items-center gap-2">
+              <div className="mt-auto flex items-center justify-center gap-2 sm:justify-start">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-rose/25 text-xs font-semibold text-copper">
                   {name.charAt(0)}
                 </span>

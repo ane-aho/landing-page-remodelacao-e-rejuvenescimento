@@ -41,8 +41,6 @@ export function ProgramPage({
       <SiteHeader />
       <main>
         <section className="relative overflow-hidden py-16 md:py-24">
-          <div className="pointer-events-none absolute -top-24 right-0 h-96 w-96 rounded-full bg-rose/25 blur-3xl" />
-          <div className="pointer-events-none absolute bottom-0 left-0 h-72 w-72 rounded-full bg-copper/15 blur-3xl" />
           <div className="relative mx-auto max-w-3xl px-4 md:px-6">
             <Link
               href="/#servicos"
@@ -89,10 +87,7 @@ export function ProgramPage({
                 </h2>
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
                   {protocols.map(({ goal, compounds }) => (
-                    <div
-                      key={goal}
-                      className="rounded-2xl border border-border bg-accent p-6 shadow-sm"
-                    >
+                    <div key={goal} className="p-2">
                       <p className="font-semibold text-primary">{goal}</p>
                       {compounds && <p className="mt-2 text-sm text-copper">{compounds}</p>}
                     </div>
@@ -147,7 +142,7 @@ export function ProgramPage({
         </section>
 
         {benefits && benefits.length > 0 && (
-          <section className="border-t border-border bg-secondary/40 py-16 md:py-24">
+          <section className="py-16 md:py-24">
             <div className="mx-auto max-w-3xl px-4 md:px-6">
               <h2 className="text-balance text-3xl font-semibold text-primary sm:text-4xl">
                 Benefícios do protocolo
