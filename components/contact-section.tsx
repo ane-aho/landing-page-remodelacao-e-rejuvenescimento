@@ -10,9 +10,14 @@ export function ContactSection() {
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
             <Logo imgClassName="h-20 sm:h-24" />
-            <p className="mt-4 text-sm font-medium uppercase tracking-[0.1em] text-copper">
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 block text-sm font-medium uppercase tracking-[0.1em] text-copper transition-colors hover:text-primary"
+            >
               Remodele seu corpo &amp; Rejuvenesça por dentro
-            </p>
+            </a>
           </div>
 
           <div className="md:text-right">
