@@ -4,17 +4,17 @@ const credentials = [
   {
     icon: Sparkles,
     title: "Especialidade",
-    description: "Ginecologia e Terapia Peptídica",
+    description: "Ginecologia, Medicina do Esporte e Sexologia",
   },
   {
     icon: ShieldCheck,
-    title: "Registro Profissional",
-    description: "CRM/CRN 00000",
+    title: "CRM",
+    description: "3827",
   },
   {
     icon: Award,
-    title: "Certificação Vigente",
-    description: "Conselho da especialidade",
+    title: "RQE",
+    description: "18093",
   },
 ]
 
@@ -54,16 +54,35 @@ export function SpecialtySection() {
 
           <div className="space-y-5">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
-              Conheça-me
+              Sobre a Doutora
             </p>
-            <h3 className="text-3xl font-semibold text-primary sm:text-4xl">
-              Dra. Roseli Perfoll
+            <h3 className="font-display text-3xl font-normal text-[#4B4B4B] sm:text-4xl">
+              Uma trajetória dedicada à saúde e à longevidade feminina
             </h3>
-            <p className="text-pretty leading-relaxed text-muted-foreground">
-              Com anos de dedicação à ginecologia, atuo desenvolvendo protocolos de terapia
-              peptídica personalizados, sempre unindo rigor clínico, escuta atenta e
-              acompanhamento próximo em cada etapa do tratamento.
-            </p>
+            <div className="space-y-4 text-pretty text-justify leading-relaxed text-muted-foreground">
+              <p>
+                Com 35 anos de atuação na medicina, a Dra. Roseli Isabel Perfoll, médica
+                ginecologista PhD em Ginecologia, construiu sua trajetória profissional atuando
+                em hospitais, maternidades e consultórios particulares em Rio do Sul e Balneário
+                Camboriú, Santa Catarina.
+              </p>
+              <p>
+                Pós-graduada em Medicina e Nutrição do Esporte e Sexologia, amplia sua visão
+                sobre a saúde feminina para além do tratamento de doenças, com atenção às
+                diferentes fases da vida e à qualidade de vida da mulher.
+              </p>
+              <p>
+                Com foco no cuidado individualizado, atua nas áreas de menopausa e reposição
+                hormonal, endometriose, transtornos sexuais e longevidade, integrando
+                conhecimento médico, experiência clínica e uma abordagem centrada nas
+                necessidades de cada paciente.
+              </p>
+              <p>
+                Uma medicina que valoriza a mulher em sua integralidade, respeitando sua
+                história, suas transformações e o desejo de viver com saúde, autonomia e
+                bem-estar.
+              </p>
+            </div>
             <div className="space-y-4 pt-2">
               {credentials.map(({ icon: Icon, title, description }) => (
                 <div key={title} className="flex items-start gap-3">
