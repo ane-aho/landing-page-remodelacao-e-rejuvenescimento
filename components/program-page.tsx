@@ -68,14 +68,14 @@ export function ProgramPage({
               {keywords}
             </p>
             <p className="mt-2 text-xl text-muted-foreground">{tagline}</p>
-            <p className="mt-8 max-w-2xl text-pretty text-justify leading-relaxed text-muted-foreground">
+            <p className="mt-8 text-pretty text-justify leading-relaxed text-muted-foreground">
               {intro}
             </p>
 
             {signs && signs.length > 0 && (
               <>
                 {preSigns && (
-                  <p className="mt-6 max-w-2xl text-pretty text-justify leading-relaxed text-muted-foreground">
+                  <p className="mt-6 text-pretty text-justify leading-relaxed text-muted-foreground">
                     {preSigns}
                   </p>
                 )}
@@ -124,7 +124,7 @@ export function ProgramPage({
             {includes && includes.length > 0 && (
               <>
                 {includesTitle && (
-                  <p className="mt-6 max-w-2xl text-pretty text-justify leading-relaxed text-muted-foreground">
+                  <p className="mt-6 text-pretty text-justify leading-relaxed text-muted-foreground">
                     {includesTitle}
                   </p>
                 )}
