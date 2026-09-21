@@ -1,12 +1,13 @@
+import Image from "next/image"
 import { Play } from "lucide-react"
 import { INSTAGRAM_HANDLE, INSTAGRAM_LINK } from "@/lib/contact"
 
 const reels = [
-  "https://www.instagram.com/reel/Db9CEKvJIll/",
-  "https://www.instagram.com/reel/DZ-48clRIaB/",
-  "https://www.instagram.com/reel/DY24WaZxNwX/",
-  "https://www.instagram.com/reel/C_yzYBgulcE/",
-  "https://www.instagram.com/reel/DbHKK7SRPeF/",
+  { href: "https://www.instagram.com/reel/Db9CEKvJIll/", cover: "/images/instagram/reel-1.jpg" },
+  { href: "https://www.instagram.com/reel/DZ-48clRIaB/", cover: "/images/instagram/reel-2.jpg" },
+  { href: "https://www.instagram.com/reel/DY24WaZxNwX/", cover: "/images/instagram/reel-3.jpg" },
+  { href: "https://www.instagram.com/reel/C_yzYBgulcE/", cover: "/images/instagram/reel-4.jpg" },
+  { href: "https://www.instagram.com/reel/DbHKK7SRPeF/", cover: "/images/instagram/reel-5.jpg" },
 ]
 
 export function GallerySection() {
@@ -30,7 +31,7 @@ export function GallerySection() {
         </div>
 
         <div className="mt-12 flex flex-wrap justify-center gap-4">
-          {reels.map((href, index) => (
+          {reels.map(({ href, cover }, index) => (
             <a
               key={href}
               href={href}
@@ -38,9 +39,13 @@ export function GallerySection() {
               rel="noopener noreferrer"
               className="group relative aspect-[4/3] w-40 shrink-0 overflow-hidden bg-muted sm:w-48"
             >
-              <span className="absolute inset-0 flex items-center justify-center text-sm text-muted-foreground">
-                Vídeo {index + 1}
-              </span>
+              <Image
+                src={cover}
+                alt={`Vídeo ${index + 1} da Dra. Roseli Perfoll no Instagram`}
+                fill
+                className="object-cover"
+                sizes="192px"
+              />
               <span className="absolute bottom-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-background/80 text-primary transition-colors group-hover:bg-copper group-hover:text-copper-foreground">
                 <Play className="h-4 w-4 fill-current" />
               </span>
