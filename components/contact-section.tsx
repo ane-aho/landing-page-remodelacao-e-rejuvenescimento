@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Mail } from "lucide-react"
 import { Logo } from "@/components/logo"
@@ -7,15 +6,6 @@ import { WHATSAPP_LINK, INSTAGRAM_LINK, EMAIL_ADDRESS } from "@/lib/contact"
 export function ContactSection() {
   return (
     <section id="contato" className="relative overflow-hidden py-20 md:py-28">
-      <Image
-        src="/images/rose-watermark.png"
-        alt=""
-        aria-hidden="true"
-        width={122}
-        height={172}
-        className="pointer-events-none absolute -bottom-16 -right-16 h-[26rem] w-auto opacity-20 sm:-right-10 sm:h-[34rem]"
-      />
-
       <div className="relative mx-auto max-w-7xl border-t border-border px-4 pt-14 md:px-6">
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
