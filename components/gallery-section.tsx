@@ -1,3 +1,6 @@
+import { Play } from "lucide-react"
+import { INSTAGRAM_HANDLE, INSTAGRAM_LINK } from "@/lib/contact"
+
 export function GallerySection() {
   return (
     <section id="espaco" className="relative overflow-hidden py-20 md:py-28">
@@ -7,24 +10,33 @@ export function GallerySection() {
             Conheça nosso espaço
           </p>
           <h2 className="mt-3 text-balance text-3xl font-semibold text-primary sm:text-4xl">
-            Nossas instalações
+            <a
+              href={INSTAGRAM_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-copper"
+            >
+              Siga-me no Instagram @{INSTAGRAM_HANDLE}
+            </a>
           </h2>
-          <p className="mt-4 text-pretty text-muted-foreground">
-            Um espaço pensado para o seu conforto e bem-estar, do início ao fim da consulta.
-          </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
-          <div className="relative col-span-2 row-span-2 flex items-end bg-muted p-5">
-            <div>
-              <p className="text-sm font-semibold text-primary">Consultório Principal</p>
-              <p className="text-xs text-muted-foreground">Endereço do consultório</p>
-            </div>
-          </div>
-          {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="flex aspect-square items-center justify-center bg-muted">
-              <span className="text-xs text-muted-foreground">Foto {i}</span>
-            </div>
+        <div className="mt-12 flex gap-4 overflow-x-auto pb-2">
+          {[1, 2, 3, 4, 5].map((i) => (
+            <a
+              key={i}
+              href={INSTAGRAM_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative aspect-[9/16] w-40 shrink-0 overflow-hidden bg-muted sm:w-48"
+            >
+              <span className="absolute inset-0 flex items-center justify-center text-sm text-muted-foreground">
+                Vídeo {i}
+              </span>
+              <span className="absolute bottom-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-background/80 text-primary transition-colors group-hover:bg-copper group-hover:text-copper-foreground">
+                <Play className="h-4 w-4 fill-current" />
+              </span>
+            </a>
           ))}
         </div>
       </div>

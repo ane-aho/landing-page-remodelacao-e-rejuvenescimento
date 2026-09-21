@@ -36,14 +36,16 @@ export function TestimonialsSection() {
 
         <div className="mt-12 grid gap-6 sm:grid-cols-3">
           {testimonials.map(({ quote, name }) => (
-            <div key={name} className="flex flex-col gap-4 p-6 text-center sm:text-left">
-              <div className="flex justify-center gap-0.5 text-copper sm:justify-start">
+            <div key={name} className="flex flex-col items-center gap-4 p-6 text-center">
+              <div className="flex justify-center gap-0.5 text-copper">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="h-4 w-4 fill-current" />
                 ))}
               </div>
-              <p className="text-sm leading-relaxed text-muted-foreground">&ldquo;{quote}&rdquo;</p>
-              <div className="mt-auto flex items-center justify-center gap-2 sm:justify-start">
+              <p className="text-pretty text-justify text-sm leading-relaxed text-muted-foreground">
+                &ldquo;{quote}&rdquo;
+              </p>
+              <div className="mt-auto flex items-center justify-center gap-2">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-rose/25 text-xs font-semibold text-copper">
                   {name.charAt(0)}
                 </span>
