@@ -47,13 +47,13 @@ export function SpecialtySection() {
         </div>
 
         <div className="mt-14 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div className="relative aspect-square overflow-hidden">
+          <div className="relative aspect-square w-full overflow-hidden">
             <Image
               src="/images/dra-roseli-bio.jpg"
               alt="Dra. Roseli Perfoll"
               fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 32rem, 90vw"
+              className="object-contain"
+              sizes="(min-width: 1024px) 40rem, 95vw"
             />
           </div>
 

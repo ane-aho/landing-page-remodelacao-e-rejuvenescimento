@@ -41,14 +41,14 @@ export function HeroSection() {
         </div>
 
         <div className="relative">
-          <div className="relative mx-auto aspect-square max-w-md overflow-hidden">
+          <div className="relative mx-auto aspect-square w-full max-w-xl overflow-hidden">
             <Image
               src="/images/dra-roseli.jpg"
               alt="Dra. Roseli Perfoll"
               fill
               priority
-              className="object-cover"
-              sizes="(min-width: 1024px) 28rem, 90vw"
+              className="object-contain"
+              sizes="(min-width: 1024px) 36rem, 95vw"
             />
           </div>
         </div>

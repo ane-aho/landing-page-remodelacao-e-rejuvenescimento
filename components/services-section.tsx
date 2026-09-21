@@ -30,7 +30,7 @@ export function ServicesSection() {
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
           <div className="relative">
-            <div className="relative mx-auto aspect-square max-w-md overflow-hidden">
+            <div className="relative mx-auto aspect-square w-full max-w-xl overflow-hidden">
               <video
                 src="/videos/dra-roseli-intro.mp4"
                 autoPlay
@@ -38,7 +38,7 @@ export function ServicesSection() {
                 muted
                 playsInline
                 controls
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain"
               />
             </div>
           </div>
@@ -48,7 +48,7 @@ export function ServicesSection() {
               <Link
                 key={href}
                 href={href}
-                className="group flex w-full max-w-sm flex-col items-center gap-3 px-6 py-8 text-center transition-opacity hover:opacity-80"
+                className="group flex aspect-square w-full max-w-sm flex-col items-center justify-center gap-3 border border-border px-6 text-center transition-colors hover:border-copper"
               >
                 <h3 className="text-2xl font-bold text-primary">{title}</h3>
                 <p className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.14em] text-copper">
