@@ -26,13 +26,16 @@ export function SpecialtySection() {
       <div className="relative mx-auto max-w-7xl px-4 md:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.14em] text-copper">
-            Nossa especialidade
+            Nossa missão
           </p>
           <h2 className="mt-3 text-balance text-3xl font-semibold text-primary sm:text-4xl">
             Remodelação &amp; Rejuvenescimento
           </h2>
-          <p className="mt-4 text-pretty text-muted-foreground">
-            Protocolos e tecnologia a serviço da sua saúde e bem-estar.
+          <p className="mt-4 text-pretty text-justify leading-relaxed text-muted-foreground">
+            Cada pessoa tem uma história, um corpo e objetivos únicos. Estas imagens retratam
+            pacientes reais que escolheram cuidar de si e compartilhar parte de sua experiência
+            conosco. Para nós, cada transformação representa, antes de tudo, uma jornada de
+            cuidado, saúde e autoestima.
           </p>
         </div>
 
