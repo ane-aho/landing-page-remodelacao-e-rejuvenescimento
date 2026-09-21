@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Sparkles, ShieldCheck, Award } from "lucide-react"
 
 const credentials = [
@@ -48,8 +49,14 @@ export function SpecialtySection() {
         </div>
 
         <div className="mt-14 grid gap-8 rounded-3xl border border-border bg-card p-8 sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div className="flex aspect-[4/5] items-center justify-center overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-accent via-rose/15 to-accent">
-            <span className="text-sm text-muted-foreground">Foto da Dra. Roseli Perfoll</span>
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border">
+            <Image
+              src="/images/dra-roseli-bio.jpg"
+              alt="Dra. Roseli Perfoll"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 32rem, 90vw"
+            />
           </div>
 
           <div className="space-y-5">
